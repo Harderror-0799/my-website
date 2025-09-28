@@ -1,40 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>iPhone Store - Modern Electronics</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>This website is fully coded by me on Android!</p>
-    </section>
+<!-- Top Bar -->
+<div class="top-bar">
+  <p><a href="#">Help</a> | <a href="#">Track Your Order</a> | <a href="#">Contact</a></p>
+</div>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>I am learning to create websites from scratch.</p>
-    </section>
+<!-- Promo Banner -->
+<div class="promo-banner">
+  <p>🎉 Get R300 off your first order! Use code <strong>APP300</strong></p>
+</div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: example@gmail.com</p>
-    </section>
+<!-- Navbar -->
+<header class="sticky-header">
+  <nav class="container">
+    <h1>📱 iPhone Store</h1>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#products">Hot Deals</a></li>
+      <li>
+        <a href="#" id="cart-link">🛒 Cart <span id="cart-count">0</span></a>
+        <div id="mini-cart" class="mini-cart">
+          <h4>Cart Items</h4>
+          <ul id="cart-items-list"></ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-    <footer>
-        <p>© 2025 My Awesome Website</p>
-    </footer>
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h2>Discover the Best Renewed Electronics</h2>
+    <p>Top-quality devices with warranty and safe delivery.</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- Search -->
+<section id="search-section" class="container">
+  <input type="text" id="product-search" placeholder="Search for products...">
+</section>
+
+<!-- Categories Section -->
+<section id="categories" class="container">
+  <h2>Shop By Category</h2>
+  <div class="category-grid">
+    <div class="category-card" data-category="iPhone">iPhones</div>
+    <div class="category-card" data-category="Samsung">Samsung</div>
+    <div class="category-card" data-category="MacBook">MacBooks</div>
+    <div class="category-card" data-category="Laptop">Laptops</div>
+    <div class="category-card" data-category="iPad">iPads</div>
+    <div class="category-card" data-category="Accessory">Accessories</div>
+  </div>
+</section>
+
+<!-- Hot Deals Section -->
+<section id="products" class="container">
+  <h2>🔥 Hot Deals</h2>
+  <div class="product-grid">
+    <div class="product" data-category="iPhone" data-name="iPhone 11" data-price="R5,099" data-specs="Screen: 6.1 inch, Camera: 12MP, Battery: 3110mAh">
+      <img src="images/iphone11.jpg" alt="iPhone 11">
+      <h3>iPhone 11</h3>
+      <p class="price">R5,099</p>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="iPhone" data-name="iPhone 12" data-price="R5,699" data-specs="Screen: 6.1 inch, Camera: 12MP, Battery: 2815mAh">
+      <img src="images/iphone12.jpg" alt="iPhone 12">
+      <h3>iPhone 12</h3>
+      <p class="price">R5,699</p>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="Laptop" data-name="Dell Latitude 7400" data-price="R6,399" data-specs="CPU: i7 8th Gen, RAM: 16GB, SSD: 512GB">
+      <img src="images/dell-latitude7400.jpg" alt="Dell Latitude 7400">
+      <h3>Dell Latitude 7400</h3>
+      <p class="price">R6,399</p>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- Product Modal -->
+<div id="product-modal" class="product-modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-image" src="" alt="">
+    <h2 id="modal-name"></h2>
+    <p id="modal-price"></p>
+    <p id="modal-specs"></p>
+    <button id="modal-add-cart" class="btn">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="footer-top container">
+    <p>&copy; 2025 iPhone Store | Created by Vusi Nkosi</p>
+    <p>Contact: <a href="mailto:vvee3195@gmail.com">vvee3195@gmail.com</a></p>
+    <div class="social-links">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </div>
+    <p>Payment Methods: <strong>Norton, PayJustNow, Float, PayFlex</strong></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
