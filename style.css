@@ -22,9 +22,9 @@ nav ul li a:hover { color:#f39c12; }
 #cart-count { background:#f39c12; color:#fff; padding:2px 7px; border-radius:50%; font-size:14px; margin-left:5px; }
 
 /* Mini Cart */
-.mini-cart { display:none; position:absolute; right:0; top:35px; background:#fff; color:#111; width:250px; max-width:90%; padding:10px; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:1000; }
-.mini-cart h4 { margin-bottom:10px; }
-.mini-cart ul { list-style:none; max-height:200px; overflow-y:auto; }
+.mini-cart { display:none; position:absolute; right:0; top:35px; background:#fff; color:#111; width:320px; max-width:90vw; padding:15px; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.3); z-index:1000; }
+.mini-cart h4 { margin-bottom:15px; font-size:18px; border-bottom:2px solid #f39c12; padding-bottom:8px; }
+.mini-cart ul { list-style:none; max-height:300px; overflow-y:auto; }
 .mini-cart ul li { margin-bottom:8px; }
 
 /* Hero Section */
