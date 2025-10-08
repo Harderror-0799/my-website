@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>iPhone Store - Modern Electronics</title>
+<meta name="description" content="Discover top-quality renewed electronics including iPhones, Samsung devices, MacBooks and more with warranty and safe delivery.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,13 +50,14 @@
 
 <!-- Search -->
 <section id="search-section" class="container">
-  <input type="text" id="product-search" placeholder="Search for products...">
+  <input type="text" id="product-search" placeholder="Search for products..." aria-label="Search products">
 </section>
 
 <!-- Categories Section -->
 <section id="categories" class="container">
   <h2>Shop By Category</h2>
   <div class="category-grid">
+    <div class="category-card" data-category="All">All Products</div>
     <div class="category-card" data-category="iPhone">iPhones</div>
     <div class="category-card" data-category="Samsung">Samsung</div>
     <div class="category-card" data-category="MacBook">MacBooks</div>
@@ -70,99 +72,104 @@
   <h2>🔥 Hot Deals</h2>
   <div class="product-grid">
     <div class="product" data-category="iPhone" data-name="iPhone 11" data-price="R5,099" data-specs="The iPhone 11 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
-      <img src="images/iphone11.jpg" alt="iPhone 11">
+      <img src="images/iphone11.jpg" alt="iPhone 11" loading="lazy">
       <h3>iPhone 11 4G 64GB Storage</h3>
       <p class="price">R5,099</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add iPhone 11 to cart">Add to Cart</button>
     </div>
     <div class="product" data-category="iPhone" data-name="iPhone 12" data-price="R8,199" data-specs="The iPhone 12 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage.">
-      <img src="images/iPhone12.jpg" alt="iPhone 12">
+      <img src="images/iPhone12.jpg" alt="iPhone 12" loading="lazy">
       <h3>iPhone 12 4G 128GB storage</h3>
       <p class="price">R8,199</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add iPhone 12 to cart">Add to Cart</button>
     </div>
     <div class="product" data-category="Laptop" data-name="Dell Latitude 7400" data-price="R6,399" data-specs="CPU: Intel Core i7-8665U 1.9Ghz vPro processor (up to 4.8Ghz, 8 Threads, 4 Core, Intel HD) Display: 14.0 inch FHD IPS (1920x1080, Matte, non-touch) Memory: 16GB RAM included (1x16GB DDR4)">
-      <img src="images/dell-latitude7400.jpg" alt="Dell Latitude 7400">
+      <img src="images/dell-latitude7400.jpg" alt="Dell Latitude 7400" loading="lazy">
       <h3>dell latitude 7400 core-i7 8th-gen</h3>
       <p class="price">R6,399</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Dell Latitude 7400 to cart">Add to Cart</button>
     </div>
       <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25 Ultra" data-price="R29,699" data-specs="The S25 Ultra has a 200MP camera, 6.8-inch 120Hz display, Snapdragon 8 Elite, 12GB RAM, up to 1TB storage, and a 5000mAh battery.">
-      <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25 Ultra">
+      <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25 Ultra" loading="lazy">
       <h3>Samsung Galaxy S25 Ultra</h3>
       <p class="price">R29,999</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S25 Ultra to cart">Add to Cart</button>
     </div>
     
           <div class="product" data-category="Samsung" data-name="Samsung Galaxy A35 5G" data-price="R6,699" data-specs="The Galaxy A35 5G has a premium design, 50MP camera, 6.6 Super AMOLED display, 5000mAh battery, and is water resistant (IPX4/IP67).">
-      <img src="images/galaxyA35.jpg" alt="Samsung Galaxy A35 5G">
+      <img src="images/galaxyA35.jpg" alt="Samsung Galaxy A35 5G" loading="lazy">
       <h3>Samsung Galaxy A35 5G</h3>
       <p class="price">R6,699</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy A35 5G to cart">Add to Cart</button>
     </div>
     
        <div class="product" data-category="Samsung" data-name="Samsung Galaxy A36 5G" data-price="R7,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxyA36.jpg" alt="Samsung Galaxy A36 5G">
+      <img src="images/galaxyA36.jpg" alt="Samsung Galaxy A36 5G" loading="lazy">
       <h3>Samsung Galaxy A36 5G</h3>
       <p class="price">R7,499</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy A36 5G to cart">Add to Cart</button>
     </div>
     
  <div class="product" data-category="Samsung" data-name="Samsung Galaxy A56 5G" data-price="R10,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxyA56.jpg" alt="Samsung Galaxy A56 5G">
+      <img src="images/galaxyA56.jpg" alt="Samsung Galaxy A56 5G" loading="lazy">
       <h3>Samsung Galaxy A56 5G</h3>
       <p class="price">R10,499</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy A56 5G to cart">Add to Cart</button>
     </div>
     
      <div class="product" data-category="Samsung" data-name="Samsung Galaxy S21+" data-price="R7,899" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxys21.jpg" alt="Samsung Galaxy S21+ ">
+      <img src="images/galaxys21.jpg" alt="Samsung Galaxy S21+ " loading="lazy">
       <h3>Samsung Galaxy S21+</h3>
       <p class="price">R7,899</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S21+ to cart">Add to Cart</button>
     </div>
     
      <div class="product" data-category="Samsung" data-name="Samsung Galaxy S24+ " data-price="R17,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxys24plus.jpg" alt="Samsung Galaxy S24+ ">
+      <img src="images/galaxys24plus.jpg" alt="Samsung Galaxy S24+ " loading="lazy">
       <h3>Samsung Galaxy S24+</h3>
       <p class="price">R17,499</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S24+ to cart">Add to Cart</button>
     </div>
     
      <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25+" data-price="R23,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25+">
+      <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25+" loading="lazy">
       <h3>Samsung Galaxy S25+</h3>
       <p class="price">R23,499</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S25+ to cart">Add to Cart</button>
     </div>
     
      <div class="product" data-category="Samsung" data-name="Samsung Galaxy Z Flip 7" data-price="R29,999" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/zflip7.jpg" alt="Samsung Galaxy Z Flip 7">
+      <img src="images/zflip7.jpg" alt="Samsung Galaxy Z Flip 7" loading="lazy">
       <h3>Samsung Galaxy Z Flip 7 5G 512GB Storage</h3>
       <p class="price">R29,999</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy Z Flip 7 to cart">Add to Cart</button>
     </div>
     
       <div class="product" data-category="Samsung" data-name="Samsung Galaxy Z Fold 7" data-price="R46,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/zfold7.jpg" alt="Samsung Galaxy Z Fold 7">
+      <img src="images/zfold7.jpg" alt="Samsung Galaxy Z Fold 7" loading="lazy">
       <h3>Samsung Galaxy Z Fold 7  5G 512GB  Storage</h3>
       <p class="price">R46,499</p>
-      <button class="btn add-to-cart">Add to Cart</button>
+      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy Z Fold 7 to cart">Add to Cart</button>
     </div>
     
   </div>
 </section>
 
 <!-- Product Modal -->
-<div id="product-modal" class="product-modal">
+<div id="product-modal" class="product-modal" aria-hidden="true">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close" aria-label="Close modal">&times;</span>
     <img id="modal-image" src="" alt="">
     <h2 id="modal-name"></h2>
-    <p id="modal-price"></p>
+    <p id="modal-price" class="price"></p>
     <p id="modal-specs"></p>
     <button id="modal-add-cart" class="btn">Add to Cart</button>
   </div>
+</div>
+
+<!-- Loading Spinner (for better UX) -->
+<div id="loading-spinner" class="loading-spinner" style="display: none;">
+  <div class="spinner"></div>
 </div>
 
 <!-- Footer -->
@@ -171,7 +178,7 @@
     <p>&copy; 2025 iPhone Store | Created by Vusi Nkosi</p>
     <p>Contact: <a href="mailto:vvee3195@gmail.com">vvee3195@gmail.com</a></p>
     <div class="social-links">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+      <a href="#" aria-label="Facebook">Facebook</a> | <a href="#" aria-label="Instagram">Instagram</a> | <a href="#" aria-label="Twitter">Twitter</a>
     </div>
     <p>Payment Methods: <strong>Norton, PayJustNow, Float, PayFlex</strong></p>
   </div>
