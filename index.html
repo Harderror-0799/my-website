@@ -22,7 +22,7 @@
 <!-- Navbar -->
 <header class="sticky-header">
   <nav class="container">
-    <h1>📱 iPhone Store</h1>
+    <h1>📱 Vital Electronics Store</h1>
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#categories">Categories</a></li>
@@ -31,7 +31,16 @@
         <a href="#" id="cart-link">🛒 Cart <span id="cart-count">0</span></a>
         <div id="mini-cart" class="mini-cart">
           <h4>Cart Items</h4>
-          <ul id="cart-items-list"></ul>
+          <ul id="cart-items-list">
+            <!-- Cart items will be injected here by JavaScript -->
+          </ul>
+          <div class="total-price" style="display: none;"> <!-- Hidden by default, shown by JS -->
+            <span>Total:</span>
+            <span id="cart-total">R0.00</span>
+          </div>
+          <div class="checkout-button-container" style="display: none;"> <!-- Hidden by default, shown by JS -->
+            <button class="btn" id="proceed-to-checkout">Proceed to Checkout</button>
+          </div>
         </div>
       </li>
     </ul>
@@ -58,6 +67,7 @@
   <h2>Shop By Category</h2>
   <div class="category-grid">
     <div class="category-card" data-category="All">All Products</div>
+      <div class="category-card" data-category="New Products">New Products</div>
     <div class="category-card" data-category="iPhone">iPhones</div>
     <div class="category-card" data-category="Samsung">Samsung</div>
     <div class="category-card" data-category="MacBook">MacBooks</div>
@@ -77,18 +87,56 @@
       <p class="price">R5,099</p>
       <button class="btn add-to-cart" aria-label="Add iPhone 11 to cart">Add to Cart</button>
     </div>
+    
+     <div class="product" data-category="iPhone" data-name="iPhone 13" data-price="R5,099" data-specs="The iPhone 13 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+      <img src="images/iphone13.jpg" alt="iPhone 13" loading="lazy">
+      <h3>iPhone 13 4G 64GB Storage</h3>
+      <p class="price">R5,099</p>
+      <button class="btn add-to-cart" aria-label="Add iPhone 13 to cart">Add to Cart</button>
+    </div>
+    
+     <div class="product" data-category="iPhone" data-name="iPhone 16" data-price="R5,099" data-specs="The iPhone 16 has a 6.1 display, 12GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+      <img src="images/iphone16.jpg" alt="iPhone 16" loading="lazy">
+      <h3>iPhone 16  256GB Storage</h3>
+      <p class="price">R5,099</p>
+      <button class="btn add-to-cart" aria-label="Add iPhone 16 to cart">Add to Cart</button>
+    </div>
+    
     <div class="product" data-category="iPhone" data-name="iPhone 12" data-price="R8,199" data-specs="The iPhone 12 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage.">
       <img src="images/iPhone12.jpg" alt="iPhone 12" loading="lazy">
       <h3>iPhone 12 4G 128GB storage</h3>
       <p class="price">R8,199</p>
       <button class="btn add-to-cart" aria-label="Add iPhone 12 to cart">Add to Cart</button>
     </div>
+    
+     <div class="product" data-category="iPhone" data-name="iPhone 14" data-price="R5,099" data-specs="The iPhone 14 has a 6.1 display, 6GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+      <img src="images/iphone14.jpg" alt="iPhone 14" loading="lazy">
+      <h3>iPhone 14 6GB Ram 64GB Storage</h3>
+      <p class="price">R5,099</p>
+      <button class="btn add-to-cart" aria-label="Add iPhone 14 to cart">Add to Cart</button>
+    </div>
+    
+     <div class="product" data-category="iPhone" data-name="iPhone 15" data-price="R5,099" data-specs="The iPhone 15 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+      <img src="images/iphone15.jpg" alt="iPhone 15" loading="lazy">
+      <h3>iPhone 15  125GB Storage</h3>
+      <p class="price">R5,099</p>
+      <button class="btn add-to-cart" aria-label="Add iPhone 15 to cart">Add to Cart</button>
+    </div>
+    
     <div class="product" data-category="Laptop" data-name="Dell Latitude 7400" data-price="R6,399" data-specs="CPU: Intel Core i7-8665U 1.9Ghz vPro processor (up to 4.8Ghz, 8 Threads, 4 Core, Intel HD) Display: 14.0 inch FHD IPS (1920x1080, Matte, non-touch) Memory: 16GB RAM included (1x16GB DDR4)">
       <img src="images/dell-latitude7400.jpg" alt="Dell Latitude 7400" loading="lazy">
       <h3>dell latitude 7400 core-i7 8th-gen</h3>
       <p class="price">R6,399</p>
       <button class="btn add-to-cart" aria-label="Add Dell Latitude 7400 to cart">Add to Cart</button>
     </div>
+    
+    <div class="product" data-category="Laptop"class="New Products" data-name="Dell Latitude 7400" data-price="R6,399" data-specs="CPU: Intel Core i7-8665U 1.9Ghz vPro processor (up to 4.8Ghz, 8 Threads, 4 Core, Intel HD) Display: 14.0 inch FHD IPS (1920x1080, Matte, non-touch) Memory: 16GB RAM included (1x16GB DDR4)">
+      <img src="images/dell-latitude7400.jpg" alt="Dell Latitude 7400" loading="lazy">
+      <h3>dell latitude 7400 core-i7 8th-gen</h3>
+      <p class="price">R6,399</p>
+      <button class="btn add-to-cart" aria-label="Add Dell Latitude 7400 to cart">Add to Cart</button>
+    </div>
+    
       <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25 Ultra" data-price="R29,699" data-specs="The S25 Ultra has a 200MP camera, 6.8-inch 120Hz display, Snapdragon 8 Elite, 12GB RAM, up to 1TB storage, and a 5000mAh battery.">
       <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25 Ultra" loading="lazy">
       <h3>Samsung Galaxy S25 Ultra</h3>
@@ -168,7 +216,7 @@
 </div>
 
 <!-- Loading Spinner (for better UX) -->
-<div id="loading-spinner" class="loading-spinner" style="display: none;">
+<div id="loading-spinner" class="loading-spinner"> <!-- Remove inline style="display: none;" -->
   <div class="spinner"></div>
 </div>
 
