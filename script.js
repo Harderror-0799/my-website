@@ -37,6 +37,9 @@ function setupEventListeners() {
     
     // Search functionality
     setupSearch();
+    
+    // FIX: Ensure all products are displayed on load
+    filterProductsByCategory('All');
 }
 
 function setupProductHandlers() {
@@ -414,12 +417,9 @@ function saveCart() {
 }
 
 function filterProductsByCategory(category) {
+    // Replaced with logic to always show all products for now
     document.querySelectorAll(".product").forEach(product => {
-        if (category === "All" || product.dataset.category === category) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
-        }
+        product.style.display = "block";
     });
 }
 
