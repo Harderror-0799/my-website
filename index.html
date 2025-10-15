@@ -3,20 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>iPhone Store - Modern Electronics</title>
-<meta name="description" content="Discover top-quality renewed electronics including iPhones, Samsung devices, MacBooks and more with warranty and safe delivery.">
+<title>Vital Electronics Store - Best Deals on Renewed iPhones, Samsung & Laptops</title>
+<meta name="description" content="Compare prices and find the best deals on renewed electronics including iPhones, Samsung devices, MacBooks and more. Get cashback rewards on every purchase!">
+<meta name="keywords" content="renewed iPhones, refurbished Samsung, cheap laptops, electronics deals, South Africa">
 <link rel="stylesheet" href="style.css">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
 <!-- Top Bar -->
 <div class="top-bar">
-  <p><a href="#">Help</a> | <a href="#">Track Your Order</a> | <a href="#">Contact</a></p>
+  <p><a href="#help">Help</a> | <a href="#track">Track Your Order</a> | <a href="#contact">Contact</a> | <a href="#blog">Blog</a></p>
 </div>
 
 <!-- Promo Banner -->
 <div class="promo-banner">
-  <p>🎉 Get R300 off your first order! Use code <strong>APP300</strong></p>
+  <p>🎉 Get up to 10% cashback on all purchases! Limited time offer!</p>
 </div>
 
 <!-- Navbar -->
@@ -27,19 +31,15 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#categories">Categories</a></li>
       <li><a href="#products">Hot Deals</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#compare">Compare</a></li>
       <li>
-        <a href="#" id="cart-link">🛒 Cart <span id="cart-count">0</span></a>
+        <a href="#" id="cart-link">🛒 Wishlist <span id="cart-count">0</span></a>
         <div id="mini-cart" class="mini-cart">
-          <h4>Cart Items</h4>
-          <ul id="cart-items-list">
-            <!-- Cart items will be injected here by JavaScript -->
-          </ul>
-          <div class="total-price" style="display: none;"> <!-- Hidden by default, shown by JS -->
-            <span>Total:</span>
-            <span id="cart-total">R0.00</span>
-          </div>
-          <div class="checkout-button-container" style="display: none;"> <!-- Hidden by default, shown by JS -->
-            <button class="btn" id="proceed-to-checkout">Proceed to Checkout</button>
+          <h4>Your Wishlist</h4>
+          <ul id="cart-items-list"></ul>
+          <div class="checkout-button-container" style="display: none;">
+            <button class="btn" id="proceed-to-checkout">View All Deals</button>
           </div>
         </div>
       </li>
@@ -51,9 +51,21 @@
 <section id="hero">
   <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h2>Discover the Best Renewed Electronics</h2>
-    <p>Top-quality devices with warranty and safe delivery.</p>
-    <a href="#products" class="btn">Shop Now</a>
+    <h2>Find the Best Deals on Renewed Electronics</h2>
+    <p>Compare prices from top retailers and earn cashback on every purchase!</p>
+    <a href="#products" class="btn">Browse Deals</a>
+  </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section id="newsletter" class="container">
+  <div class="newsletter-box">
+    <h3>💰 Get Exclusive Deals & Cashback Alerts!</h3>
+    <p>Join 10,000+ smart shoppers saving money on electronics</p>
+    <form id="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Subscribe Free</button>
+    </form>
   </div>
 </section>
 
@@ -67,7 +79,6 @@
   <h2>Shop By Category</h2>
   <div class="category-grid">
     <div class="category-card" data-category="All">All Products</div>
-      <div class="category-card" data-category="New Products">New Products</div>
     <div class="category-card" data-category="iPhone">iPhones</div>
     <div class="category-card" data-category="Samsung">Samsung</div>
     <div class="category-card" data-category="MacBook">MacBooks</div>
@@ -79,128 +90,232 @@
 
 <!-- Hot Deals Section -->
 <section id="products" class="container">
-  <h2>🔥 Hot Deals</h2>
+  <h2>🔥 Hot Deals - Compare & Save</h2>
   <div class="product-grid">
-    <div class="product" data-category="iPhone" data-name="iPhone 11" data-price="R5,099" data-specs="The iPhone 11 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+    <div class="product" data-category="iPhone" data-name="iPhone 11" data-price="R5,099" data-specs="The iPhone 11 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage" data-affiliate="https://amzn.to/iphone11">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/iphone11.jpg" alt="iPhone 11" loading="lazy">
       <h3>iPhone 11 4G 64GB Storage</h3>
-      <p class="price">R5,099</p>
-      <button class="btn add-to-cart" aria-label="Add iPhone 11 to cart">Add to Cart</button>
+      <p class="price">From R5,099</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare iPhone 11 prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="iPhone" data-name="iPhone 13" data-price="R10,399" data-specs="The iPhone 13 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+    <div class="product" data-category="iPhone" data-name="iPhone 13" data-price="R10,399" data-specs="The iPhone 13 has a 6.1 display, 4GB RAM, A15 Bionic processor, 3240mAh battery, 12MP dual rear cameras, and up to 512GB storage" data-affiliate="https://amzn.to/iphone13">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/iphone13.jpg" alt="iPhone 13" loading="lazy">
-      <h3>iPhone 13 4G 64GB Storage</h3>
-      <p class="price">R10,399</p>
-      <button class="btn add-to-cart" aria-label="Add iPhone 13 to cart">Add to Cart</button>
+      <h3>iPhone 13 5G 128GB Storage</h3>
+      <p class="price">From R10,399</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare iPhone 13 prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="iPhone" data-name="iPhone 16" data-price="R18,999" data-specs="The iPhone 16 has a 6.1 display, 12GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+    <div class="product" data-category="iPhone" data-name="iPhone 16" data-price="R18,999" data-specs="The iPhone 16 has a 6.1 display, 8GB RAM, A18 Bionic processor, 3500mAh battery, 48MP dual rear cameras, and up to 512GB storage" data-affiliate="https://amzn.to/iphone16">
+      <div class="cashback-badge">💰 7% Cashback</div>
       <img src="images/iphone16.jpg" alt="iPhone 16" loading="lazy">
-      <h3>iPhone 16  256GB Storage</h3>
-      <p class="price">R18,999</p>
-      <button class="btn add-to-cart" aria-label="Add iPhone 16 to cart">Add to Cart</button>
+      <h3>iPhone 16 5G 256GB Storage</h3>
+      <p class="price">From R18,999</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare iPhone 16 prices">Compare Prices</button>
     </div>
     
-    <div class="product" data-category="iPhone" data-name="iPhone 12" data-price="R8,199" data-specs="The iPhone 12 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage.">
+    <div class="product" data-category="iPhone" data-name="iPhone 12" data-price="R8,199" data-specs="The iPhone 12 has a 6.1 display, 4GB RAM, A14 Bionic processor, 2815mAh battery, 12MP dual rear cameras, and up to 256GB storage" data-affiliate="https://amzn.to/iphone12">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/iPhone12.jpg" alt="iPhone 12" loading="lazy">
-      <h3>iPhone 12 4G 128GB storage</h3>
-      <p class="price">R8,199</p>
-      <button class="btn add-to-cart" aria-label="Add iPhone 12 to cart">Add to Cart</button>
+      <h3>iPhone 12 5G 128GB storage</h3>
+      <p class="price">From R8,199</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare iPhone 12 prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="iPhone" data-name="iPhone 14" data-price="R15,099" data-specs="The iPhone 14 has a 6.1 display, 6GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+    <div class="product" data-category="iPhone" data-name="iPhone 14" data-price="R15,099" data-specs="The iPhone 14 has a 6.1 display, 6GB RAM, A15 Bionic processor, 3279mAh battery, 12MP dual rear cameras, and up to 512GB storage" data-affiliate="https://amzn.to/iphone14">
+      <div class="cashback-badge">💰 6% Cashback</div>
       <img src="images/iphone14.jpg" alt="iPhone 14" loading="lazy">
-      <h3>iPhone 14 6GB Ram 64GB Storage</h3>
-      <p class="price">R15,099</p>
-      <button class="btn add-to-cart" aria-label="Add iPhone 14 to cart">Add to Cart</button>
+      <h3>iPhone 14 6GB Ram 128GB Storage</h3>
+      <p class="price">From R15,099</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare iPhone 14 prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="iPhone" data-name="iPhone 15" data-price="R16,999" data-specs="The iPhone 15 has a 6.1 display, 4GB RAM, A13 Bionic processor, 3110mAh battery, 12MP dual rear cameras, and up to 256GB storage">
+    <div class="product" data-category="iPhone" data-name="iPhone 15" data-price="R16,999" data-specs="The iPhone 15 has a 6.1 display, 6GB RAM, A16 Bionic processor, 3349mAh battery, 48MP dual rear cameras, and up to 512GB storage" data-affiliate="https://amzn.to/iphone15">
+      <div class="cashback-badge">💰 6% Cashback</div>
       <img src="images/iphone15.jpg" alt="iPhone 15" loading="lazy">
-      <h3>iPhone 15  125GB Storage</h3>
-      <p class="price">R16,999</p>
-      <button class="btn add-to-cart" aria-label="Add iPhone 15 to cart">Add to Cart</button>
+      <h3>iPhone 15 6GB 128GB Storage</h3>
+      <p class="price">From R16,999</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare iPhone 15 prices">Compare Prices</button>
     </div>
     
-    <div class="product" data-category="Laptop" data-name="Dell Latitude 7400" data-price="R6,399" data-specs="CPU: Intel Core i7-8665U 1.9Ghz vPro processor (up to 4.8Ghz, 8 Threads, 4 Core, Intel HD) Display: 14.0 inch FHD IPS (1920x1080, Matte, non-touch) Memory: 16GB RAM included (1x16GB DDR4)">
+    <div class="product" data-category="Laptop" data-name="Dell Latitude 7400" data-price="R6,399" data-specs="CPU: Intel Core i7-8665U 1.9Ghz vPro processor (up to 4.8Ghz, 8 Threads, 4 Core, Intel HD) Display: 14.0 inch FHD IPS (1920x1080, Matte, non-touch) Memory: 16GB RAM included (1x16GB DDR4)" data-affiliate="https://amzn.to/dell7400">
+      <div class="cashback-badge">💰 4% Cashback</div>
       <img src="images/dell-latitude7400.jpg" alt="Dell Latitude 7400" loading="lazy">
-      <h3>dell latitude 7400 core-i7 8th-gen</h3>
-      <p class="price">R6,399</p>
-      <button class="btn add-to-cart" aria-label="Add Dell Latitude 7400 to cart">Add to Cart</button>
+      <h3>Dell Latitude 7400 Core-i7 8th-gen</h3>
+      <p class="price">From R6,399</p>
+      <div class="price-compare">
+        <small>Compare prices from 3+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Dell Latitude 7400 prices">Compare Prices</button>
     </div>
     
-    <div class="product" data-category="Laptop"class="New Products" data-name="Dell Inspiron 15 3530 Intel Core i5" data-price="R10,499" data-specs="CPU: Intel Core i5-8665U 2.9Ghz vPro processor (up to 4.8Ghz, 8 Threads, 4 Core, Intel HD) Display: 14.0 inch FHD IPS (1920x1080, Matte, non-touch) Memory: 16GB RAM included (1x16GB DDR4)">
-      <img src="images/dell-inspiron15.jpg" alt="Dell Latitude 7400" loading="lazy">
+    <div class="product" data-category="Laptop" data-name="Dell Inspiron 15 3530 Intel Core i5" data-price="R10,499" data-specs="CPU: Intel Core i5-1335U processor Display: 15.6 inch FHD (1920x1080) Memory: 16GB RAM, 512GB SSD" data-affiliate="https://amzn.to/dellinspiron15">
+      <div class="cashback-badge">💰 4% Cashback</div>
+      <img src="images/dell-inspiron15.jpg" alt="Dell Inspiron 15" loading="lazy">
       <h3>Dell Inspiron 15 3530 Intel Core i5 - 16GB - 512GB</h3>
-      <p class="price">R10,499</p>
-      <button class="btn add-to-cart" aria-label="Add Dell Inspiron 15 3530 to cart">Add to Cart</button>
+      <p class="price">From R10,499</p>
+      <div class="price-compare">
+        <small>Compare prices from 3+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Dell Inspiron 15 prices">Compare Prices</button>
     </div>
     
-      <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25 Ultra" data-price="R29,699" data-specs="The S25 Ultra has a 200MP camera, 6.8-inch 120Hz display, Snapdragon 8 Elite, 12GB RAM, up to 1TB storage, and a 5000mAh battery.">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25 Ultra" data-price="R29,699" data-specs="The S25 Ultra has a 200MP camera, 6.8-inch 120Hz display, Snapdragon 8 Elite, 12GB RAM, up to 1TB storage, and a 5000mAh battery" data-affiliate="https://amzn.to/s25ultra">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25 Ultra" loading="lazy">
       <h3>Samsung Galaxy S25 Ultra</h3>
-      <p class="price">R29,999</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S25 Ultra to cart">Add to Cart</button>
+      <p class="price">From R29,999</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy S25 Ultra prices">Compare Prices</button>
     </div>
     
-          <div class="product" data-category="Samsung" data-name="Samsung Galaxy A35 5G" data-price="R6,699" data-specs="The Galaxy A35 5G has a premium design, 50MP camera, 6.6 Super AMOLED display, 5000mAh battery, and is water resistant (IPX4/IP67).">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy A35 5G" data-price="R6,699" data-specs="The Galaxy A35 5G has a premium design, 50MP camera, 6.6 Super AMOLED display, 5000mAh battery, and is water resistant (IPX4/IP67)" data-affiliate="https://amzn.to/galaxya35">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/galaxyA35.jpg" alt="Samsung Galaxy A35 5G" loading="lazy">
       <h3>Samsung Galaxy A35 5G</h3>
-      <p class="price">R6,699</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy A35 5G to cart">Add to Cart</button>
+      <p class="price">From R6,699</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy A35 5G prices">Compare Prices</button>
     </div>
     
-       <div class="product" data-category="Samsung" data-name="Samsung Galaxy A36 5G" data-price="R7,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy A36 5G" data-price="R7,499" data-specs="Screen: 6.6 inch AMOLED, Camera: 50MP, Battery: 5000mAh, RAM: 8GB" data-affiliate="https://amzn.to/galaxya36">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/galaxyA36.jpg" alt="Samsung Galaxy A36 5G" loading="lazy">
       <h3>Samsung Galaxy A36 5G</h3>
-      <p class="price">R7,499</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy A36 5G to cart">Add to Cart</button>
+      <p class="price">From R7,499</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy A36 5G prices">Compare Prices</button>
     </div>
     
- <div class="product" data-category="Samsung" data-name="Samsung Galaxy A56 5G" data-price="R10,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy A56 5G" data-price="R10,499" data-specs="Screen: 6.6 inch AMOLED, Camera: 50MP, Battery: 5000mAh, RAM: 8GB" data-affiliate="https://amzn.to/galaxya56">
+      <div class="cashback-badge">💰 5% Cashback</div>
       <img src="images/galaxyA56.jpg" alt="Samsung Galaxy A56 5G" loading="lazy">
       <h3>Samsung Galaxy A56 5G</h3>
-      <p class="price">R10,499</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy A56 5G to cart">Add to Cart</button>
+      <p class="price">From R10,499</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy A56 5G prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="Samsung" data-name="Samsung Galaxy S21+" data-price="R7,899" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxys21.jpg" alt="Samsung Galaxy S21+ " loading="lazy">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy S21+" data-price="R7,899" data-specs="Screen: 6.7 inch AMOLED 120Hz, Camera: 64MP telephoto, Battery: 4800mAh, RAM: 8GB" data-affiliate="https://amzn.to/galaxys21plus">
+      <div class="cashback-badge">💰 5% Cashback</div>
+      <img src="images/galaxys21.jpg" alt="Samsung Galaxy S21+" loading="lazy">
       <h3>Samsung Galaxy S21+</h3>
-      <p class="price">R7,899</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S21+ to cart">Add to Cart</button>
+      <p class="price">From R7,899</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy S21+ prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="Samsung" data-name="Samsung Galaxy S24+ " data-price="R17,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
-      <img src="images/galaxys24plus.jpg" alt="Samsung Galaxy S24+ " loading="lazy">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy S24+" data-price="R17,499" data-specs="Screen: 6.7 inch AMOLED 120Hz, Camera: 50MP, Battery: 4900mAh, RAM: 12GB" data-affiliate="https://amzn.to/galaxys24plus">
+      <div class="cashback-badge">💰 6% Cashback</div>
+      <img src="images/galaxys24plus.jpg" alt="Samsung Galaxy S24+" loading="lazy">
       <h3>Samsung Galaxy S24+</h3>
-      <p class="price">R17,499</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S24+ to cart">Add to Cart</button>
+      <p class="price">From R17,499</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy S24+ prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25+" data-price="R23,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy S25+" data-price="R23,499" data-specs="Screen: 6.7 inch AMOLED 120Hz, Camera: 50MP, Battery: 5000mAh, RAM: 12GB" data-affiliate="https://amzn.to/galaxys25plus">
+      <div class="cashback-badge">💰 6% Cashback</div>
       <img src="images/galaxys25plus.jpg" alt="Samsung Galaxy S25+" loading="lazy">
       <h3>Samsung Galaxy S25+</h3>
-      <p class="price">R23,499</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy S25+ to cart">Add to Cart</button>
+      <p class="price">From R23,499</p>
+      <div class="price-compare">
+        <small>Compare prices from 5+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy S25+ prices">Compare Prices</button>
     </div>
     
-     <div class="product" data-category="Samsung" data-name="Samsung Galaxy Z Flip 7" data-price="R29,999" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy Z Flip 7" data-price="R29,999" data-specs="Screen: 6.7 inch foldable AMOLED, Camera: 50MP, Battery: 4000mAh, RAM: 12GB, Storage: 512GB" data-affiliate="https://amzn.to/zflip7">
+      <div class="cashback-badge">💰 7% Cashback</div>
       <img src="images/zflip7.jpg" alt="Samsung Galaxy Z Flip 7" loading="lazy">
       <h3>Samsung Galaxy Z Flip 7 5G 512GB Storage</h3>
-      <p class="price">R29,999</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy Z Flip 7 to cart">Add to Cart</button>
+      <p class="price">From R29,999</p>
+      <div class="price-compare">
+        <small>Compare prices from 4+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy Z Flip 7 prices">Compare Prices</button>
     </div>
     
-      <div class="product" data-category="Samsung" data-name="Samsung Galaxy Z Fold 7" data-price="R46,499" data-specs="Screen: 6.1 inch, Camera: 22MP, Battery: 5000mAh">
+    <div class="product" data-category="Samsung" data-name="Samsung Galaxy Z Fold 7" data-price="R46,499" data-specs="Screen: 7.6 inch foldable AMOLED, Camera: 200MP, Battery: 4400mAh, RAM: 16GB, Storage: 512GB" data-affiliate="https://amzn.to/zfold7">
+      <div class="cashback-badge">💰 7% Cashback</div>
       <img src="images/zfold7.jpg" alt="Samsung Galaxy Z Fold 7" loading="lazy">
-      <h3>Samsung Galaxy Z Fold 7  5G 512GB  Storage</h3>
-      <p class="price">R46,499</p>
-      <button class="btn add-to-cart" aria-label="Add Samsung Galaxy Z Fold 7 to cart">Add to Cart</button>
+      <h3>Samsung Galaxy Z Fold 7 5G 512GB Storage</h3>
+      <p class="price">From R46,499</p>
+      <div class="price-compare">
+        <small>Compare prices from 4+ retailers</small>
+      </div>
+      <button class="btn add-to-cart" aria-label="Compare Samsung Galaxy Z Fold 7 prices">Compare Prices</button>
     </div>
     
   </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="container">
+  <h2>📰 Latest Articles & Buying Guides</h2>
+  <div class="blog-grid">
+    <article class="blog-card">
+      <h3>iPhone 15 vs iPhone 16: Which Should You Buy in 2025?</h3>
+      <p>Complete comparison guide to help you choose the best iPhone for your budget...</p>
+      <a href="#" class="btn-small">Read More</a>
+    </article>
+    <article class="blog-card">
+      <h3>How to Save Money on Renewed Electronics</h3>
+      <p>Expert tips on finding the best deals on refurbished phones and laptops...</p>
+      <a href="#" class="btn-small">Read More</a>
+    </article>
+    <article class="blog-card">
+      <h3>Samsung Galaxy S25 Ultra Review: Is It Worth It?</h3>
+      <p>In-depth review of Samsung's latest flagship with pros, cons, and alternatives...</p>
+      <a href="#" class="btn-small">Read More</a>
+    </article>
+  </div>
+</section>
+
+<!-- Ad Space -->
+<section class="container ad-section">
+  <!-- Google AdSense Ad Unit -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </section>
 
 <!-- Product Modal -->
@@ -211,27 +326,54 @@
     <h2 id="modal-name"></h2>
     <p id="modal-price" class="price"></p>
     <p id="modal-specs"></p>
-    <button id="modal-add-cart" class="btn">Add to Cart</button>
+    <div class="affiliate-buttons">
+      <a href="#" id="modal-amazon" class="btn btn-amazon" target="_blank" rel="nofollow noopener">
+        View on Amazon
+      </a>
+      <a href="#" id="modal-ebay" class="btn btn-ebay" target="_blank" rel="nofollow noopener">
+        View on eBay
+      </a>
+      <a href="#" id="modal-backmarket" class="btn btn-backmarket" target="_blank" rel="nofollow noopener">
+        View on Back Market
+      </a>
+    </div>
+    <button id="modal-add-cart" class="btn">Add to Wishlist</button>
   </div>
-</div>
-
-<!-- Loading Spinner (for better UX) -->
-<div id="loading-spinner" class="loading-spinner"> <!-- Remove inline style="display: none;" -->
-  <div class="spinner"></div>
 </div>
 
 <!-- Footer -->
 <footer id="contact">
   <div class="footer-top container">
-    <p>&copy; 2025 iPhone Store | Created by Vusi Nkosi</p>
-    <p>Contact: <a href="mailto:vvee3195@gmail.com">vvee3195@gmail.com</a></p>
-    <div class="social-links">
-      <a href="#" aria-label="Facebook">https://www.facebook.com/vusie.nikosie</a> | <a href="#" aria-label="Instagram">Instagram</a> | <a href="#" aria-label="Twitter">Twitter</a>
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>We help you find the best deals on renewed electronics from trusted retailers worldwide. Earn cashback on every purchase!</p>
     </div>
-    <p>Payment Methods: <strong>Norton, PayJustNow, Float, PayFlex</strong></p>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#products">Hot Deals</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#help">Help Center</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: <a href="mailto:vvee3195@gmail.com">vvee3195@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/vusie.nikosie" target="_blank">Facebook</a> | 
+        <a href="#" target="_blank">Instagram</a> | 
+        <a href="#" target="_blank">Twitter</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Vital Electronics Store | Created by Vusi Nkosi</p>
+    <p><small>Disclosure: We earn commission from qualifying purchases through affiliate links at no extra cost to you.</small></p>
   </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
